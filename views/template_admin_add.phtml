@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_add</title>
+<style>
+    #form{
+        display: flex;
+        justify-content: center;
+    }
+
+    input{
+        padding: 5px;
+        display: flex;
+        border-radius: 5px;
+        width:350px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type='submit'], label {
+    margin-top: 1rem;
+    border-radius: 5px;
+    }
+
+
+</style>
+</head>
+<body>
+    
+<h1 class="mb-3 text-center">Admin Add Picture</h1>
+
+<!--DEBUT DU FORMULAIRE  IDENTIQUE A LA BDD-->
+<!-- FORM POUR AJOUT IMAGE-->
+<form method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" name="description" id="description" placeholder="Description">
+    </div>
+    <div class="mb-3">
+        <label for="src" class="form-label">Source</label>
+        <input type="text" class="form-control" name="src" id="src" placeholder="URL Source">
+    </div>
+    <div class="mb-3">
+        <label for="author" class="form-label">Author</label>
+        <input type="text" class="form-control" name="author" id="author" placeholder="Author">
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" name="submit" value="Add Picture">
+    </div>
+
+</form>
+</body>
+</html>
+
+

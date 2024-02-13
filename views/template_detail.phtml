@@ -1,0 +1,24 @@
+<h1 class="col-12 bg-primary text-center"><?= $pic ['title'] ?></h1>
+
+<section class="row">
+    <div class="col-12">
+        <img class="img-fluid" src="<?= $pic ['src'] ?>" alt="<?= $pic ['title'] ?>"> <!-- On appelle la variable pour récupérer la source ainsi qye le titre renseignés dans la BDD-->
+
+        <div class="col-12"> <!--grid col-12 pour avoir un affichage sur l'ensemble de la page-->
+            <p><?= $pic ['description'] ?></p> <!-- On appelle la variable pour récupérer la description renseignée dans la BDD-->
+        </div>
+
+        <div class="col-12 mt-3"> 
+            <p class=><?= $pic ['author'] ?></p> <!-- On appelle la variable pour récupérer l'auteur renseigné dans la BDD-->
+        </div>
+        
+        <div class="col-6 mt-3 fst-italic font-weight-light"> <!--grid col-6 pour avoir un affichage sur 1/2 de la page-->
+        <p class="card-text"><?= $pic ['created_at'] ?></p> <!-- On appelle la variable pour récupérer la date de création renseignée dans la BDD-->
+        </div>
+
+        <div class="col-6 mt-3 fst-italic font-weight-light">
+        <p class="card-text"><?= $pic ['updated_at'] ?></p> <!-- On appelle la variable pour récupérer la date de fin renseignée dans la BDD-->
+        </div>
+
+    </div>
+</section>

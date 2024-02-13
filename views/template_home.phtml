@@ -1,0 +1,38 @@
+<h1>Home</h1>
+
+<!-- DEBUT DU CAROUSEL -->
+<div id="homeCarousel" class="carousel slide">
+
+        <!-- DIV DES BOUTONS DU CAROUSEL EN BAS -->
+        <div class="carousel-indicators">
+            <?php foreach ($pictures as $key => $pic) : ?>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="<?= $key ?>" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <?php endforeach ?>
+        </div>
+            
+        <!-- DIV DU CONTENU DU CAROUSEL DONC DES SLIDES -->
+        <div class="carousel-inner">
+        <!-- DEUXIEME BOUCLE FOREACH POUR AFFICHER CHAQUE PIC AVEC SRC TITLE ET DESCRIPTION -->
+        <?php foreach ($pictures as $key => $pic) : ?>
+            
+                    <div class="carousel-item <?php if ($key===array_key_first($pictures)) echo 'active' ?>">
+                        <img src="<?= $pic['src'] ?>" class="d-block w-100" alt="<?= $pic['title'] ?>">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5><?= $pic ['title'] ?></h5>
+                            <p><?= $pic ['description'] ?></p>
+                        </div>  
+                    </div>                       
+        <?php endforeach ?>
+        <!-- FIN DE LA FIN DE LA BOUCLE  -->
+        </div>
+        <!-- FIN DIV DU CONTENU DU CAROUSEL -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</div>

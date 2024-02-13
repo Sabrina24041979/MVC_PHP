@@ -1,0 +1,31 @@
+<h1 class="text-center">Gallery</h1>
+
+<section class="row">
+    <?php foreach($pictures as $pic ) : ?>
+
+    <article class="col-12 col-sm-6 col-md-4">
+        <div class="card mb-3">
+            <a href="<?= "?page=detail&id=".$pic['id'] ?>"> <!--On crèe ce lien pour indiqué à la page gallery qu'en cliquant sur la photo, une page détail va s'ouvrir. Cela va correspondre à un controller et un template-->
+            <img src="<?= $pic ['src'] ?> " class="card-img-top" alt="<?= $pic ['title'] ?>"> <!-- On appelle la variable $pic pour aller chercher la source src de l'image ainsi que son titre-->
+            </a>
+
+            <div class="card-body">
+                <a class="text-dark text-decoration-none" href="<?= "?page=detail&id=".$pic['id'] ?>"> <!--le lien pour aller sur la page détail. Le mot detail détermine la navigation et le controller. Détermine le chargement du controller et du template.-->
+                <h4 class="card-title"><?php echo $pic ['title'] ?></h4>
+                </a>
+
+                <p class="card-text"><?php echo $pic ['description'] ?></p> <!-- On appelle la variable via une instruction php pour aller récupérer la descritpion qui est dans la table phpmyadmin-->
+                <p class="card-text"><?php echo $pic ['author'] ?></p> <!-- On appelle la variable via une instruction php pour aller récupérer l'auteur qui est dans la table phpmyadmin-->
+                <p class="card-text"><?php echo $pic ['created_at'] ?></p> <!-- On appelle la variable via une instruction php pour aller récupérer la date de création qui est dans la table phpmyadmin-->
+                <p class="card-text"><?php echo $pic ['updated_at'] ?></p> <!-- On appelle la variable via une instruction php pour aller récupérer la date de fin  qui est dans la table phpmyadmin-->
+
+                <a href="<?="?page=detail&id=".$pic['id'] ?>" class="btn btn secondary">Read more</a> <!--lien pour aller entre la page template_gallery.phtml et la page template_détail.phtml-->
+            </div>
+        </div>
+    </article>
+
+    
+    <?php endforeach; ?>
+    </section>
+
+
